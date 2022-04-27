@@ -19,5 +19,7 @@ $resp = curl_exec($curl);
 curl_close($curl);
 var_dump($resp);
 
+echo("Hello!")
+
 ?>
 
