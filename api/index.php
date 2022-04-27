@@ -18,5 +18,7 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 $resp = curl_exec($curl);
 curl_close($curl);
 echo(json_encode($resp));
+
+
 ?>
 
