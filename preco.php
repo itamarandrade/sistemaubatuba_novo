@@ -17,8 +17,10 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 $resp = curl_exec($curl);
 curl_close($curl);
-echo(json_encode($resp));
-
-
+$jsonResult = json_decode($resp,1);
+//var_dump($jsonResult);
+//echo $jsonResult['descricao'];
+foreach($jsonResult['itens'] as $json){
+	echo $json['descricaoClassificacao'] . PHP_EOL;
+}
 ?>
-

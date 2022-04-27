@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="pt-BR"><head>
 	<meta charset="UTF-8">
 		<title>Sistema Ubatuba</title>
@@ -39,6 +40,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel="stylesheet" id="e89903333-css" href="resources/uploads/essential-addons-elementor/e89903333.min.css?ver=1650160465" type="text/css" media="all">
 <link rel="stylesheet" id="hfe-style-css" href="resources/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1.6.10" type="text/css" media="all">
 <link rel="stylesheet" id="elementor-icons-css" href="resources/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.15.0" type="text/css" media="all">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <style id="elementor-icons-inline-css" type="text/css">
 
 		.elementor-add-new-section .elementor-add-templately-promo-button{
@@ -1264,7 +1266,43 @@ border-collapse: separate;}
 				<div class="elementor-widget-container">
 							
 <p style="color: #fff;">Segundo a Lei, os valores por diária da TPA variam de acordo com o tipo de veículo.</p>
-
+<script>
+/*Chama Api*/
+	$(document).on('click', '#resultado1', function(){
+			alert('no ajax');
+			let descricaoClassificacao; 
+			alert('entrando no ajax')
+			$.ajax({
+					//url: "https://app.powerencontros.com/vtex.api.test.php",
+					url: "./preco.php",
+					type: "get",
+					crossDomain:true,
+					dataType:"JSON",
+					success: function(o) {
+						console.log("No arquivo local");
+						console.log(o);
+						if(o.descricaoClassificacao === null){
+							console.log("data de nascimento não atualizada");
+						}else{
+							console.log("data de nascimento atualizada");
+						}
+					},
+					error: function(e){console.trace(e);console.log("erro get birthDate"); alert("erro ao solicitar birthdate")},
+					fail: function(e){console.log(e);console.log("erro get birthDate"); alert("erro ao solicsitar birthdate")}
+				});			
+		});
+		/*
+		const xmlhttp = new XMLHttpRequest();
+		xmlhttp.onload = function() {
+		const myObj = JSON.parse(this.responseText);
+		document.getElementById("resultado1").innerHTML = myObj.name;
+		}
+		xmlhttp.open("GET", "preco.php");
+		xmlhttp.send();*/
+</script>
+<p id="resultado1">
+	resultado
+</p>
 <table class="preco" style="width: 100%;">
 <tbody>
 <tr>
