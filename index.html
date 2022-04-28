@@ -40,7 +40,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel="stylesheet" id="e89903333-css" href="resources/uploads/essential-addons-elementor/e89903333.min.css?ver=1650160465" type="text/css" media="all">
 <link rel="stylesheet" id="hfe-style-css" href="resources/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1.6.10" type="text/css" media="all">
 <link rel="stylesheet" id="elementor-icons-css" href="resources/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.15.0" type="text/css" media="all">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style id="elementor-icons-inline-css" type="text/css">
 
 		.elementor-add-new-section .elementor-add-templately-promo-button{
@@ -1268,66 +1268,79 @@ border-collapse: separate;}
 <p style="color: #fff;">Segundo a Lei, os valores por diária da TPA variam de acordo com o tipo de veículo.</p>
 <script>
 /*Chama Api*/
-	$(document).on('click', '#resultado1', function(){
-			alert('no ajax');
+/*$(document).on('click', '#resultado1', function(){
+    $.get("preco.php", function(data, status){
+		$( "#resultado1" ).append( data );
+    });
+  });*/
+
+	//$(document).on('click', '#resultado1', function(){
+		$(document).ready(function(){
 			let descricaoClassificacao; 
-			alert('entrando no ajax')
 			$.ajax({
 					//url: "https://app.powerencontros.com/vtex.api.test.php",
-					url: "./preco.php",
+					url: "preco.php",
 					type: "get",
 					crossDomain:true,
 					dataType:"JSON",
-					success: function(o) {
-						console.log("No arquivo local");
-						console.log(o);
-						if(o.descricaoClassificacao === null){
-							console.log("data de nascimento não atualizada");
-						}else{
-							console.log("data de nascimento atualizada");
-						}
+					success: function(result) {
+						$('#pequeno').text(result.descricaoClassificacao[0]);
+
+						$('#precopequeno').text("R$ " + parseFloat(result.preco[0],10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
+						
+						$('#moto').text(result.descricaoClassificacao[1]);
+						
+						$('#precomoto').text("R$ " + parseFloat(result.preco[1],10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
+						
+						$('#utilitarios').text(result.descricaoClassificacao[2]);
+						
+						$('#precoutilitarios').text("R$ " + parseFloat(result.preco[2],10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
+						
+						$('#excursao').text(result.descricaoClassificacao[3]);
+						
+						$('#precoexcursao').text("R$ " + parseFloat(result.preco[3],10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
+						
+						$('#onibus').text(result.descricaoClassificacao[4]);
+						
+						$('#precoonibus').text("R$ " + parseFloat(result.preco[4],10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
+						
+						$('#caminhoes').text(result.descricaoClassificacao[5]);
+						
+						$('#precocaminhoes').text("R$ " + parseFloat(result.preco[5],10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
+						
 					},
-					error: function(e){console.trace(e);console.log("erro get birthDate"); alert("erro ao solicitar birthdate")},
-					fail: function(e){console.log(e);console.log("erro get birthDate"); alert("erro ao solicsitar birthdate")}
+					error: function(result){console.trace(result);console.log("erro get birthDate");},
+					
 				});			
 		});
-		/*
-		const xmlhttp = new XMLHttpRequest();
-		xmlhttp.onload = function() {
-		const myObj = JSON.parse(this.responseText);
-		document.getElementById("resultado1").innerHTML = myObj.name;
-		}
-		xmlhttp.open("GET", "preco.php");
-		xmlhttp.send();*/
+		
+		
 </script>
-<p id="resultado1">
-	resultado
-</p>
 <table class="preco" style="width: 100%;">
 <tbody>
 <tr>
-<td>• Motocicletas:</td>
-<td>R$ 3,50</td>
+<td id="moto">• Motocicletas:</td>
+<td id="precomoto">R$ 3,50</td>
 </tr>
 <tr>
-<td>• Veículos de pequeno porte:</td>
-<td>R$ 13,00</td>
+<td id="pequeno">• Veículos de pequeno porte:</td>
+<td id="precopequeno">R$ 13,00</td>
 </tr>
 <tr>
-<td>• Veículos utilitários (caminhonetes e kombis):</td>
-<td>R$ 19,50</td>
+<td id="utilitarios">• Veículos utilitários (caminhonetes e kombis):</td>
+<td id="precoutilitarios">R$ 19,50</td>
 </tr>
 <tr>
-<td>• Veículos de excursão (Vans):</td>
-<td>R$ 39,00</td>
+<td id="excursao">• Veículos de excursão (Vans):</td>
+<td id="precoexcursao">R$ 39,00</td>
 </tr>
 <tr>
-<td>• Micro-ônibus e caminhões:</td>
-<td>R$ 59,00</td>
+<td id="caminhoes">• Micro-ônibus e caminhões:</td>
+<td id="precocaminhoes">R$ 59,00</td>
 </tr>
 <tr>
-<td>• Ônibus:</td>
-<td>R$ 92,00</td>
+<td id="onibus">• Ônibus:</td>
+<td id="precoonibus">R$ 92,00</td>
 </tr>
 </tbody>
 </table>						</div>
