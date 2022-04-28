@@ -1268,18 +1268,12 @@ border-collapse: separate;}
 <p style="color: #fff;">Segundo a Lei, os valores por diária da TPA variam de acordo com o tipo de veículo.</p>
 <script>
 /*Chama Api*/
-/*$(document).on('click', '#resultado1', function(){
-    $.get("preco.php", function(data, status){
-		$( "#resultado1" ).append( data );
-    });
-  });*/
 
-	//$(document).on('click', '#resultado1', function(){
 		$(document).ready(function(){
 			let descricaoClassificacao; 
 			$.ajax({
 					//url: "https://app.powerencontros.com/vtex.api.test.php",
-					url: "preco.php",
+					url: "api/preco.php",
 					type: "get",
 					crossDomain:true,
 					dataType:"JSON",
