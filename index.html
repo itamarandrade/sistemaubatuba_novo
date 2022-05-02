@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="pt-BR"><head>
 	<meta charset="UTF-8">
-		<title>Sistema Ubatuba</title>
+<link rel="apple-touch-icon" sizes="180x180" href="resources/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="resources/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="resources/img/favicon-16x16.png">
+		<title>ECO Ubatuba - Taxa de Preservação Ambiental</title>
             <script type="text/javascript" id="wpuf-language-script">
                 var error_str_obj = {
                     'required' : 'is required',
@@ -138,7 +141,7 @@ border-collapse: separate;}
     font-weight: 500;
     background-color: #3F8B58;
     box-shadow: -2px -2px 2px 0px #ffffff !important;
-    padding: 5%;
+    
 	border: 1px solid #3F8B58;
 	width: 100%;
 }
@@ -278,7 +281,7 @@ border-collapse: separate;}
 																</a>
 															</span>
 															<span class="elementor-grid-item">
-																<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-login" target="_blank" href="https://www.instagram.com/tpaecoubatuba/">
+																<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-login" target="_blank" href="https://portal.ecoubatuba.com.br/">
 															<span class="elementor-heading-title elementor-size-default">Login</span>
 															
 															</a>
@@ -488,6 +491,9 @@ border-collapse: separate;}
 			var offset = document.getElementById('topo-fixo').offsetTop;
 			var menu = document.getElementById('menu-fixo');
 			var topo = document.getElementById('topo-fixo');
+			var topop = document.getElementById('topo');
+			var menup = document.getElementById('menu');
+			var testeira = document.getElementById('testeira')
 		
 			document.addEventListener('scroll', function() {
 				if (document.body.scrollTop > offset || document.documentElement.scrollTop > offset) {
@@ -495,18 +501,24 @@ border-collapse: separate;}
 					menu.style.width = '100%';
 					menu.style.zIndex = '999';
 					menu.style.display = 'block';
-					menu.style.top = '50';
+					menu.style.top = '50px';
 					topo.style.position = 'fixed';
 					topo.style.width = '100%';
 					topo.style.zIndex = '999';
 					topo.style.display = 'block';
 					topo.style.top = '0';
+					topop.style.display = 'none';
+					menup.style.display = 'none';
+					testeira.style.top = '145px';
 
 				} else {
 					menu.style.position = 'initial';
 					menu.style.display = 'none';
 					topo.style.position = 'initial';
 					topo.style.display = 'none';
+					topop.style.display = 'block';
+					menup.style.display = 'block';
+					testeira.style.top = '0';
 				}
 			});
 		}
@@ -533,7 +545,7 @@ border-collapse: separate;}
 								</div>
 		</section>
 		
-		<section class="elementor-section elementor-top-section elementor-element elementor-element-b567766 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b567766" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<section id="topo" class="elementor-section elementor-top-section elementor-element elementor-element-b567766 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b567766" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 		<div class="elementor-container elementor-column-gap-default">
 			<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7491919" data-id="7491919" data-element_type="column">
 				<div class="elementor-widget-wrap elementor-element-populated">
@@ -638,7 +650,7 @@ border-collapse: separate;}
 		</div>
 							</div>
 		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-fc96ca1 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="fc96ca1" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<section id="menu" class="elementor-section elementor-top-section elementor-element elementor-element-fc96ca1 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="fc96ca1" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-09fb4ee" data-id="09fb4ee" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
@@ -674,7 +686,7 @@ border-collapse: separate;}
 								<div class="elementor-element elementor-element-2d9901c elementor-widget elementor-widget-heading" data-id="2d9901c" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 			<style>/*! elementor - v3.6.3 - 12-04-2022 */
-.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h2 class="elementor-heading-title elementor-size-default">Login</h2>		</div>
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><a href=" https://portal.ecoubatuba.com.br"><h2 class="elementor-heading-title elementor-size-default">Login</h2></a>		</div>
 				</div>
 				<div class="elementor-element elementor-element-6d7ab98 elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="6d7ab98" data-element_type="widget" data-widget_type="icon-list.default">
 				<div class="elementor-widget-container">
@@ -844,7 +856,7 @@ border-collapse: separate;}
 		</div>
 							</div>
 		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-33d8e7c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="33d8e7c" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<section id="testeira" class="elementor-section elementor-top-section elementor-element elementor-element-33d8e7c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="33d8e7c" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-613a6a0" data-id="613a6a0" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
@@ -871,7 +883,7 @@ border-collapse: separate;}
 								<div class="elementor-element elementor-element-a1dbb38 elementor-align-justify elementor-widget elementor-widget-button" data-id="a1dbb38" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+			<a style="display: none;" href="https://pagamento.ecoubatuba.com.br" class="elementor-button-link elementor-button elementor-size-sm" role="button">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">Pagamento TPA</span>
 		</span>
@@ -1132,7 +1144,7 @@ border-collapse: separate;}
 								<div class="elementor-element elementor-element-de587c8 elementor-align-justify elementor-widget elementor-widget-button" data-id="de587c8" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+			<a style="display: none;" href="https://pagamento.ecoubatuba.com.br" class="elementor-button-link elementor-button elementor-size-sm" role="button">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">Pagamento <b>TPA</b></span>
 		</span>
@@ -1142,7 +1154,7 @@ border-collapse: separate;}
 				</div>
 				<div class="elementor-element elementor-element-9283c43 elementor-widget elementor-widget-text-editor" data-id="9283c43" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-							<p>Clique aqui para acessar as formas de pagamento</p>						</div>
+							<p style="display: none;">Clique aqui para acessar as formas de pagamento</p>						</div>
 				</div>
 				<div class="elementor-element elementor-element-8010941 elementor-absolute elementor-widget elementor-widget-image" data-id="8010941" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
@@ -1155,7 +1167,7 @@ border-collapse: separate;}
 								<div class="elementor-element elementor-element-e028e19 elementor-align-justify elementor-widget elementor-widget-button" data-id="e028e19" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+			<a href="https://portal.ecoubatuba.com.br" class="elementor-button-link elementor-button elementor-size-sm" role="button">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">Isenção TPA</span>
 		</span>
@@ -1481,28 +1493,18 @@ border-collapse: separate;}
 		</script>
 		<div class="rppreco">
 			<div class="rpreço">
-				<p>POSTOS DE PAGTO.<br> Clique e veja ao lado:</p>
-			</div>
-			<div class="rpreço">
-				<button id="btnoficiais" class="elementor-button-link elementor-button" onclick="mudarcredenciados()">
-					Pagar TPA
-				</button>
-			</div>
-			<div class="rpreço">
-				<p>SITE ECO UBATUBA
-					<br>Clique para pagar:</p>
+				<p>POSTOS DE PAGTO.<br> Clique e veja abaixo:</p>
 			</div>
 			<div class="rpreço">
 				<button id="btnroficiais" class="elementor-button-link elementor-button elementor-size-sm" onclick="mudarrcredenciados()">
 					Postos Oficiais 
 				</button>
-			
 			</div>
 			<div class="rpreço">
 				<button id="btnrcredenciados" class="elementor-button-link elementor-button elementor-size-sm" onclick="mudarroficiais()">
 					Credenciados 
 				</button>
-			</div>	
+			</div>
 			<div class="rpreço">
 				<p id="rcredenciados"style="text-align: left;overflow-y: scroll; height: 420px; margin:0; padding: 6px;">POSTOS CREDENCIADOS<br>
 					<b>Nome do Estabelecimento</b><br> Endereço Endereço Endereço<br>
@@ -1520,13 +1522,22 @@ border-collapse: separate;}
 						</p>
 			</div>
 			<div class="rpreço">
-				<p>APP ECO UBATUBA<br> Disponível:</p>
+				<p>SITE ECO UBATUBA
+					<br>Clique para pagar:</p>
 			</div>
 			<div class="rpreço">
+				<button id="btnoficiais" class="elementor-button-link elementor-button" onclick="mudarcredenciados()">
+					Pagar TPA
+				</button>
+			</div>
+			<div style="display: none;" class="rpreço">
+				<p >APP ECO UBATUBA<br> Disponível:</p>
+			</div>
+			<div style="display: none;" class="rpreço">
 			<img width="800" height="238" src="resources/img/googleplay-1.png">
 			
 			</div>
-			<div class="rpreço">
+			<div style="display: none;" class="rpreço">
 				<img width="768" height="236" src="resources/img/appstore-1.png">
 			</div>
 			<div class="rpreço">
@@ -1542,48 +1553,47 @@ border-collapse: separate;}
 			<tr>
 			<td class="tabdesc" >POSTOS DE PAGTO.<br> Clique e veja ao lado:</td>
 			<td>
-				<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-				<span class="elementor-button-content-wrapper">
-				<span class="elementor-button-text">Pagar TPA</span>
-				</span>
-			</a>
-		</td>
+				<button id="btnoficiais" class="elementor-button-link elementor-button elementor-size-sm" onclick="mudarcredenciados()">
+					Postos Oficiais 
+				</button>
+			</td>
 			<td>
-				<img width="660" height="141" 
-				src="resources/img/icones_cartaoboletopix.png" class="attachment-large size-large" alt="" loading="lazy" srcset="resources/img/icones_cartaoboletopix.png 660w, resources/img/icones_cartaoboletopix-300x64.png 300w" sizes="(max-width: 660px) 100vw, 660px"></td>
+				<button style="display: none;" id="btncredenciados" class="elementor-button-link elementor-button elementor-size-sm" onclick="mudaroficiais()">
+					Credenciados 
+					</button>
+			</td>
 			<td rowspan="4"style="width: 230px; border-left: solid 2px #3F8B58 !important; padding: 10px;">
-				<p id="credenciados"style="text-align: left;overflow-y: scroll; height: 420px; margin:0; padding: 6px;">POSTOS CREDENCIADOS<br>
-				<b>Nome do Estabelecimento</b><br> Endereço Endereço Endereço<br>
-				<b>Nome do Estabelecimento</b><br> Endereço Endereço Endereço<br>
-				<b>Nome do Estabelecimento</b><br> Endereço Endereço Endereço<br>
-				<b>Nome do Estabelecimento</b><br> Endereço Endereço Endereço<br>
-				<b>Nome do Estabelecimento</b><br> Endereço Endereço Endereço<br>
+				<p id="credenciados"style="text-align: left;overflow-y: scroll; height: 420px; margin:0; padding: 6px;">POSTOS OFICIAIS<br>
+				<b>Centro de Atendimento TPA</b><br> Rua Dona Maria Alves  529 - Centro.<br>
+				
 				</p>
 				<p id="oficiais"style="text-align: left;overflow-y: scroll; height: 420px; margin:0; padding: 6px;">POSTOS OFICIAIS <br>
-					<b>Nome do Estabelecimento</b><br> Endereço Endereço Endereço<br>
-					<b>Nome do Estabelecimento</b><br> Endereço Endereço Endereço<br>
-					<b>Nome do Estabelecimento</b><br> Endereço Endereço Endereço<br>
-					<b>Nome do Estabelecimento</b><br> Endereço Endereço Endereço<br>
-					<b>Nome do Estabelecimento</b><br> Endereço Endereço Endereço<br>
+					<b>Centro de Atendimento TPA</b><br> Rua Dona Maria Alves  529 - Centro.<br>
+					
 					</p>
 			</td>
 			</tr>
 			<tr>
 			<td class="tabdesc">SITE ECO UBATUBA<br> Clique para pagar:</td>
 			<td>
-				<button id="btnoficiais" class="elementor-button-link elementor-button elementor-size-sm" onclick="mudarcredenciados()">
-					Postos Oficiais 
-				</button>
+				<a style="display: none;" href="https://pagamento.ecoubatuba.com.br" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+					<span class="elementor-button-content-wrapper">
+					<span class="elementor-button-text">Pagar TPA</span>
+					</span>
+				</a>
+				
 			</td>
-			<td><button id="btncredenciados" class="elementor-button-link elementor-button elementor-size-sm" onclick="mudaroficiais()">
-				Credenciados 
-			</button></td>
+			<td>
+				<img width="660" height="141" 
+				src="resources/img/icones_cartaoboletopix.png" class="attachment-large size-large" alt="" loading="lazy" srcset="resources/img/icones_cartaoboletopix.png 660w, resources/img/icones_cartaoboletopix-300x64.png 300w" sizes="(max-width: 660px) 100vw, 660px">
+				
+		</td>
 			
 			</tr>
-			<tr>
-			<td class="tabdesc">APP ECO UBATUBA<br> Disponível:</td>
-			<td><img width="800" height="238" src="resources/img/googleplay-1.png" class="attachment-large size-large" alt="" loading="lazy" srcset="resources/img/googleplay-1-1024x304.png 1024w, resources/img/googleplay-1-300x89.png 300w, resources/img/googleplay-1-768x228.png 768w, resources/img/googleplay-1-1536x455.png 1536w, resources/img/googleplay-1-2048x607.png 2048w" sizes="(max-width: 800px) 100vw, 800px"></td>
-			<td><img width="768" height="236" src="resources/img/appstore-1.png" class="attachment-large size-large" alt=""></td>
+			<tr >
+			<td class="tabdesc"><p style="display: none;">APP ECO UBATUBA<br> Disponível:</p></td>
+			<td><img style="display: none;" width="800" height="238" src="resources/img/googleplay-1.png" class="attachment-large size-large" alt="" loading="lazy" srcset="resources/img/googleplay-1-1024x304.png 1024w, resources/img/googleplay-1-300x89.png 300w, resources/img/googleplay-1-768x228.png 768w, resources/img/googleplay-1-1536x455.png 1536w, resources/img/googleplay-1-2048x607.png 2048w" sizes="(max-width: 800px) 100vw, 800px"></td>
+			<td><img style="display: none;" width="768" height="236" src="resources/img/appstore-1.png" class="attachment-large size-large" alt=""></td>
 			
 			</tr>
 			<tr>
