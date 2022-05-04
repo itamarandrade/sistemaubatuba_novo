@@ -348,6 +348,8 @@
 	<link rel="stylesheet" id="elementor-icons-fa-regular-css"
 		href="resources/css/elementor/font-awesome/css/regular.min.css?ver=5.15.3" type="text/css" media="all">
 	<script type="text/javascript" src="resources/js/wp-user-frontend/upload.js?ver=5.9.3" id="wpuf-upload-js"></script>
+	<script type="text/javascript" src="api/Enviacontato.js"></script>
+	<script type="text/javascript" src="api/preco.js"></script>
 
 	<style>
 		ul.wpuf_packs li {
@@ -1089,7 +1091,7 @@
 													href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 												<style>
 													.elementor-element-logofixo img {
-														width: 100%;
+														width: 50%;
 													}
 
 													.elementor-element-passaro img {
@@ -1300,7 +1302,7 @@
 																testeira.style.top = '160px';
 																testeira.style.margin = '77px 0px';}
 																if (window.innerWidth < 600){
-																	testeira.style.top = '200px';
+																	testeira.style.top = '130px';
 																testeira.style.margin = '200px 0px';
 																}
 															} else {
@@ -2780,50 +2782,7 @@
 
 												<p style="color: #fff;">Segundo a Lei, os valores por diária da TPA
 													variam de acordo com o tipo de veículo.</p>
-												<script>
-													/*Chama Api*/
-
-													$(document).ready(function () {
-														let descricaoClassificacao;
-														$.ajax({
-															//url: "https://app.powerencontros.com/vtex.api.test.php",
-															url: "api/preco.php",
-															type: "get",
-															crossDomain: true,
-															dataType: "JSON",
-															success: function (result) {
-																$('#pequeno').text(result.descricaoClassificacao[0]);
-
-																$('#precopequeno').text("R$ " + parseFloat(result.preco[0], 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
-
-																$('#moto').text(result.descricaoClassificacao[1]);
-
-																$('#precomoto').text("R$ " + parseFloat(result.preco[1], 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
-
-																$('#utilitarios').text(result.descricaoClassificacao[2]);
-
-																$('#precoutilitarios').text("R$ " + parseFloat(result.preco[2], 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
-
-																$('#excursao').text(result.descricaoClassificacao[3]);
-
-																$('#precoexcursao').text("R$ " + parseFloat(result.preco[3], 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
-
-																$('#onibus').text(result.descricaoClassificacao[4]);
-
-																$('#precoonibus').text("R$ " + parseFloat(result.preco[4], 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
-
-																$('#caminhoes').text(result.descricaoClassificacao[5]);
-
-																$('#precocaminhoes').text("R$ " + parseFloat(result.preco[5], 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
-
-															},
-															error: function (result) { console.trace(result); console.log("Erro ao carregar API"); },
-
-														});
-													});
-
-
-												</script>
+												
 												<table class="preco" style="width: 100%;">
 													<tbody>
 														<tr>
@@ -3423,36 +3382,7 @@
 																			aria-atomic="true"></p>
 																		<ul></ul>
 																	</div>
-																	<form action="/elementor-360/#wpcf7-f637-p360-o1"
-																		method="post"
-																		class="wpcf7-form init cf7sg-ready"
-																		novalidate="novalidate" data-status="init"
-																		id="wpcf7-cf7sg-form-contato">
-																		<div style="display: none;">
-																			<input type="hidden" name="_wpcf7"
-																				value="637">
-																			<input type="hidden" name="_wpcf7_version"
-																				value="5.5.6">
-																			<input type="hidden" name="_wpcf7_locale"
-																				value="en_US">
-																			<input type="hidden" name="_wpcf7_unit_tag"
-																				value="wpcf7-f637-p360-o1">
-																			<input type="hidden"
-																				name="_wpcf7_container_post"
-																				value="360">
-																			<input type="hidden"
-																				name="_wpcf7_posted_data_hash" value="">
-																			<input type="hidden" name="_wpcf7_key"
-																				value="contato">
-																			<input type="hidden" name="_cf7sg_toggles"
-																				value="">
-																			<input type="hidden" name="_cf7sg_version"
-																				value="4.12.13">
-																			<input type="hidden" name="_wpnonce"
-																				value="e7204a6430">
-																			<input type="hidden" name="_map_author"
-																				value="0">
-																		</div>
+																	<form class="wpcf7-form init cf7sg-ready" id="wpcf7-cf7sg-form-contato">
 																		<div class="container">
 																			<div class="row">
 																				<div class="columns one-half">
@@ -3461,9 +3391,10 @@
 																							<div class="columns full">
 																								<div class="field text">
 																									<label></label><span
-																										class="wpcf7-form-control-wrap nome"><input
-																											type="text"
-																											name="nome"
+																										class="wpcf7-form-control-wrap nome">
+																										<input 
+																											type="text" 
+																											name="nome" 
 																											value=""
 																											size="40"
 																											class="wpcf7-form-control wpcf7-text"
