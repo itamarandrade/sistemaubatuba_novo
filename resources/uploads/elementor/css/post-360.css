@@ -719,13 +719,15 @@ body.rtl .elementor-360 .elementor-element.elementor-element-8010941 {
 .elementor-360 .elementor-element.elementor-element-eba4740>.elementor-widget-wrap>.elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
     margin-bottom: 0px;
 }
-
+.elementor-360 .elementor-element.elementor-element-20cda2b p{
+    margin: 0;
+}
 .elementor-360 .elementor-element.elementor-element-eba4740>.elementor-element-populated {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin: 0px 0px 0px 0px;
     --e-column-margin-right: 0px;
     --e-column-margin-left: 0px;
-    padding: 010px 50px 50px 50px;
+    padding: 010px 50px 5px 50px;
 }
 
 .elementor-360 .elementor-element.elementor-element-eba4740>.elementor-element-populated>.elementor-background-overlay {
