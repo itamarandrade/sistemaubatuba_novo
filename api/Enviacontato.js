@@ -45,10 +45,13 @@ $(document).ready(function(){
             contentType: 'application/json',
             success: function(data){
                 console.log('Sucesso');
+                $("#respostaform").append("<h2 style='text-align: center;font-size: 20px;'>Email enviado com sucesso</h2>");
             },
             error: function(data){/*Função que será executada caso a resposta não seja da classe 200*/
-                alert("Email não enviado");
+            $("#respostaform").append("<h2 style='text-align: center;font-size: 20px;'> Falha ao enviar mensagem</h2>");    
+            console.log("Email não enviado");
                 
+
             }
         })
         
