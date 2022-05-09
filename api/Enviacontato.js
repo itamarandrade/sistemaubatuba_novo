@@ -48,6 +48,7 @@ $(document).ready(function(){
             },
             error: function(data){/*Função que será executada caso a resposta não seja da classe 200*/
                 alert("Email não enviado");
+                
             }
         })
         
