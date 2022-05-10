@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-var url = "https://sistema.hml.ecoubatuba.com.br/api/tarifacao/atual";
+var url = "https://sistema.ecoubatuba.com.br/api/tarifacao/atual";
 var token = "Basic dG90ZW0xOmE2NGQxODQ4NzdmMTNmMzRkMzY3MDMzYjQ1MTFmNTg0NmEzZGVmMWM=";
 
     let descricaoSite;
@@ -11,13 +11,7 @@ var token = "Basic dG90ZW0xOmE2NGQxODQ4NzdmMTNmMzRkMzY3MDMzYjQ1MTFmNTg0NmEzZGVmM
         crossDomain: true,
         dataType: "JSON",
         success: function (result) {
-            console.log(result);
-            console.log(result.itens[0].descricaoSite);
-            console.log(result.itens[1].descricaoSite);
-            console.log(result.itens[2].descricaoSite);
-            console.log(result.itens[3].descricaoSite);
-            console.log(result.itens[4].descricaoSite);
-            console.log(result.itens[5].descricaoSite);
+           
             
             $('#pequeno').text(result.itens[0].descricaoSite);
 
