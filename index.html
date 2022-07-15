@@ -25,6 +25,7 @@
 	</script>
 
 	<style type="text/css">
+		
 		img.wp-smiley,
 		img.emoji {
 			display: inline !important;
@@ -350,6 +351,9 @@
 	<script type="text/javascript" src="resources/js/wp-user-frontend/upload.js?ver=5.9.3" id="wpuf-upload-js"></script>
 	<script type="text/javascript" src="api/Enviacontato.js"></script>
 	<script type="text/javascript" src="api/preco.js"></script>
+	<script type="text/javascript" src="api/politica.js"></script>
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 
 	<style>
 		ul.wpuf_packs li {
@@ -494,7 +498,9 @@
 			margin-top: 0px !important;
 		}
 	</style>
-
+	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+		
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 </head>
 
@@ -2801,7 +2807,7 @@
 
 												<table class="preco" style="width: 100%;">
 													<tbody>
-														<tr>
+														<!--<tr>
 															<td id="moto">• Motocicletas:</td>
 															<td id="precomoto">R$ 3,50</td>
 														</tr>
@@ -2825,7 +2831,7 @@
 														<tr>
 															<td id="onibus">• Ônibus:</td>
 															<td id="precoonibus">R$ 92,00</td>
-														</tr>
+														</tr>-->
 													</tbody>
 												</table>
 											</div>
@@ -2882,6 +2888,35 @@
 					</div>
 				</div>
 			</div>
+		</section>
+		
+						<section class="elementor-section elementor-inner-section elementor-element contatoWpp elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="512c4ce" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element contatoWpptxt" data-id="1d6fe4a" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-e028e19 elementor-align-justify elementor-widget elementor-widget-button" data-id="e028e19" data-element_type="widget" data-widget_type="button.default">
+											<div class="elementor-widget-container">
+												<div class="elementor-button-wrapper">
+													<span>
+														ENTRE EM CONTATO COM NOSSA CENTRAL </span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element contatoWppbtn" data-id="eba4740" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-d459aa3 elementor-widget elementor-widget-heading" data-id="d459aa3" data-element_type="widget" data-widget_type="heading.default">
+											<button class="btnWpp">Whatsapp</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						
+			
+		
 		</section>
 		<section
 			class="elementor-section elementor-top-section elementor-element elementor-element-4777256 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
@@ -4213,6 +4248,7 @@
 		aria-live="polite" aria-relevant="additions text" aria-atomic="true">
 	</div>
 	<script src="resources/js/elementor/swiper.min.js?ver=5.3.6"></script>
+	
 </body>
 
 </html>

@@ -96,7 +96,74 @@
 .elementor-360 .elementor-element.elementor-element-7d489f6 img {
     width: 50%;
 }
-
+.divLgpd{
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+#divLgpd:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .divLgpd > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 15px 20px;
+    background: #fff;
+  }
+  .contatoWpp{
+    background-color: #DEEBC0;
+  }
+  .contatoWpp .elementor-container{
+      width: 1024px;
+      margin: 0 auto;
+      
+  }
+  .contatoWpptxt{
+      width: 70% !important;
+      padding: 50px;
+      
+  }
+  .contatoWpptxt span{
+    color: #3F8B58;
+    font-family: "Roboto", Sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+  }
+  .contatoWppbtn{
+      width: 30% !important;
+      padding: 50px;
+      
+  }
+  .btnWpp{
+    font-family: "Roboto", Sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    background-color: #3F8B58;
+    box-shadow: -2px -2px 2px 0px #ffffff !important;
+    border: 1px solid #3F8B58;
+    width: 100%;
+    color: #fff;
+  }
+  .btnWpp:hover{
+    font-family: "Roboto", Sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    background-color: #3F8B58;
+    box-shadow: -2px -2px 2px 0px #ffffff !important;
+    border: 1px solid #3F8B58;
+    width: 100%;
+    color: #fff;
+  }
 .elementor-360 .elementor-element.elementor-element-e746b45 img {
     width: 60%;
 }
