@@ -1860,4 +1860,13 @@ body.rtl .elementor-360 .elementor-element.elementor-element-d890d82 {
     .elementor-360 .elementor-element.elementor-element-6f0f490 {
         width: 19.997%;
     }
+    .contatoWpp .elementor-container{
+        width: 100%;
+    }
+    .contatoWpptxt{
+        width: 100%;
+    }
+    .contatoWppbtn{
+        width: 100%;
+    }
 }
