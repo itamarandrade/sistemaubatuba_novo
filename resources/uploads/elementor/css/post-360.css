@@ -129,18 +129,30 @@
       
   }
   .contatoWpptxt{
-      width: 70% !important;
-      padding: 50px;
-      
+    color: #3F8B58;
+    padding: 50px;
+    text-align: center;
   }
-  .contatoWpptxt span{
+  .centralatendimento span{
+    color: #3F8B58 !important;  
+  }
+  .centralatendimento{
+    --divider-color:#3F8B58 !important;
+  }
+  .contatoWpptxt i{
+    color: #3F8B58;
+    font-size: 2em;
+    clear: none;
+    
+  }
+  .contatoWpptxt p{
     color: #3F8B58;
     font-family: "Roboto", Sans-serif;
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 500;
   }
   .contatoWppbtn{
-      width: 30% !important;
+      
       padding: 50px;
       
   }
@@ -1919,7 +1931,7 @@ body.rtl .elementor-360 .elementor-element.elementor-element-d890d82 {
     }
 
     .elementor-360 .elementor-element.elementor-element-c8fb731 {
-        width: 59.972%;
+        width: 40%;
     }
 
     .elementor-360 .elementor-element.elementor-element-25e1360 {

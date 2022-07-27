@@ -15,7 +15,7 @@ $(document).ready(function () {
                 console.log(result);
                 console.log(result.textoDescritivo);
                 console.log(result.linkDocumento);
-
+                $("#politica").append("<a href='"+ result.linkDocumento +"'> Politica de Privacidade</a>");
                 window.cookieconsent.initialise({
                     "palette": {
                       "popup": {
